@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR Kodlås Escape Room</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Three.js bibliotek för 3D-grafik -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <!-- VR-knapp visas när VR är tillgängligt -->
+        <button id="enterVR" style="display: none;">Starta VR</button>
+        
+        <!-- Informationstext visas när spelet laddas -->
+        <div id="info">
+            <h1>VR Kodlås Escape Room</h1>
+            <p>Instruktioner:</p>
+            <ul>
+                <li>Du befinner dig i ett rum med ledtrådar på väggarna</li>
+                <li>Kommunicera med dina vänner utanför VR som har manualen</li>
+                <li>Lös koden inom 7 minuter</li>
+            </ul>
+            <p>Tryck på "Starta VR" för att börja spelet!</p>
+        </div>
+        
+        <!-- Timer som visas i VR -->
+        <div id="timer" style="display: none;">07:00</div>
+    </div>
+
+    <!-- Läs in JavaScript-filerna -->
+    <script src="scripts/paintings.js"></script>
+    <script src="scripts/room.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
