@@ -21,7 +21,7 @@ let lastSnapTurnTime = 0;
 let leftStickWasCentered = true;
 
 // **KORRIGERING: Definiera playerRadius globalt HÄR**
-const playerRadius = 0.3; // Spelarens ungefärliga "radie" för kollision, i meter.
+const playerRadius = 0.4; // Spelarens ungefärliga "radie" för kollision, i meter.
 let roomBoundaries = {}; // Definieras här, populeras i init()
 
 function checkXR() {
@@ -74,7 +74,7 @@ function init() {
 
     playerRig = new THREE.Group();
 // Prova ett av dessa värden, ett i taget:
-playerRig.position.set(0, 0.3, 0); // Känn dig väldigt kort, bänken bör vara i brösthöjd.
+playerRig.position.set(0, 0.5, 0); // Känn dig väldigt kort, bänken bör vara i brösthöjd.
 // playerRig.position.set(0, 0, 0);   // Din vy är nu direkt på det virtuella golvet.
 console.log("PlayerRig initial Y position satt till:", playerRig.position.y);
 playerRig.rotation.y = Math.PI;    
@@ -128,8 +128,6 @@ scene.add(playerRig);
 }
 
 // startVR, onSessionEnded, setupControllers, createControllerModel, onSelectStart, onWindowResize, animate
-// är OFÖRÄNDRADE från versionen i svar #33 (som du fick senast och som hade den sänkta spelarhöjden).
-// Den enda ändringen här är att säkerställa att playerRadius är globalt definierad.
 
 function startVR() {
     document.getElementById('info').style.display = 'none';
