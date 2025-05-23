@@ -21,7 +21,7 @@ let lastSnapTurnTime = 0;
 let leftStickWasCentered = true;
 
 // **KORRIGERING: Definiera playerRadius globalt HÄR**
-const playerRadius = 0.4; // Spelarens ungefärliga "radie" för kollision, i meter.
+const playerRadius = 0.1; // Spelarens ungefärliga "radie" för kollision, i meter.
 let roomBoundaries = {}; // Definieras här, populeras i init()
 
 function checkXR() {
